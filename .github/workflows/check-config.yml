@@ -5,17 +5,22 @@ on:
   push:
     paths:
       - 'config.json'
+      - 'workflow.json'
+      - '.github/workflows/check-config.yml'
 
 jobs:
-  check-config:
+  validate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get project files
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check configuration
-        run: python -m json.tool config.json
+      - name: Check JSON configuration
+        run: |
+          python -m json.tool config.json
+          python -m json.tool workflow.json
 
-      - name: Success
-        run: echo "Future Tech config is valid!"
+      - name: Confirm workflow steps
+        run: |
+          python -c "import json; d=json.load(open('workflow.json')); assert len(d['steps']) > 0; print('Workflow configuration is valid!')"
