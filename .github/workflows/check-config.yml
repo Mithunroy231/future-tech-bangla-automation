@@ -1,0 +1,21 @@
+name: Future Tech Automation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config.json'
+
+jobs:
+  check-config:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Check configuration
+        run: python -m json.tool config.json
+
+      - name: Success
+        run: echo "Future Tech config is valid!"
