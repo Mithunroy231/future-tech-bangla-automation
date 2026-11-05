@@ -1,0 +1,24 @@
+{
+  "project": "Future Tech বাংলা",
+  "language": "bn",
+  "content_types": ["shorts", "long_videos"],
+  "steps": [
+    "research_topic",
+    "verify_facts",
+    "write_bengali_script",
+    "generate_voiceover",
+    "create_video",
+    "generate_subtitles",
+    "create_thumbnail",
+    "generate_seo_metadata",
+    "prepare_preview"
+  ],
+  "approval": {
+    "required": true,
+    "publish_without_approval": false
+  },
+  "budget": {
+    "currency": "USD",
+    "limit": 0
+  }
+}
