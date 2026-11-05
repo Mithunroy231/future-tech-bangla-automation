@@ -1,0 +1,24 @@
+{
+  "project": "Future Tech বাংলা",
+  "language": "Bengali",
+  "platform": "YouTube",
+  "content_types": ["Shorts", "Long Videos"],
+  "automation": {
+    "topic_research": true,
+    "script_generation": true,
+    "voice_generation": true,
+    "video_creation": true,
+    "subtitle_generation": true,
+    "thumbnail_generation": true,
+    "seo_generation": true,
+    "upload_requires_approval": true
+  },
+  "publishing": {
+    "auto_publish": false,
+    "owner_approval_required": true
+  },
+  "budget": {
+    "currency": "USD",
+    "maximum": 0
+  }
+}
